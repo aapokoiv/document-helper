@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      dockerfile: api/dev.Dockerfile
+    restart: "no"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./api:/app/api:ro
+      - ./tsconfig.json:/app/tsconfig.json:ro
